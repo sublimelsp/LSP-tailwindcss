@@ -1,0 +1,92 @@
+{
+	// if you are developing this plugin...
+	"developing": false,
+	//////////////////
+	// LSP settings //
+	//////////////////
+	"languages": [
+		{
+			"languageId": "html",
+			// ST3
+			"scopes": ["text.html.basic"],
+			"syntaxes": [
+				"Packages/HTML/HTML.sublime-syntax",
+				"Packages/PHP/PHP.sublime-syntax"
+			],
+			// ST4
+			"document_selector": "text.html.basic | embedding.php | text.blade",
+			"feature_selector": "text.html"
+		},
+		{
+			"languageId": "javascript",
+			// ST3
+			"scopes": ["source.js"],
+			"syntaxes": [
+				"Packages/JavaScript/JavaScript.sublime-syntax",
+				"Packages/Babel/JavaScript (Babel).sublime-syntax"
+			],
+			// ST4
+			"document_selector": "source.js"
+		},
+		{
+			"languageId": "css",
+			// ST3
+			"scopes": ["source.css"],
+			"syntaxes": [
+				"Packages/CSS/CSS.sublime-syntax",
+				"Packages/CSS3/CSS3.sublime-syntax"
+			],
+			// ST4
+			"document_selector": "source.css"
+		},
+		{
+			"languageId": "scss",
+			// ST3
+			"scopes": ["source.scss"],
+			"syntaxes": ["Packages/Sass/Syntaxes/SCSS.sublime-syntax"],
+			// ST4
+			"document_selector": "source.scss"
+		},
+		{
+			"languageId": "less",
+			// ST3
+			"scopes": ["source.less"],
+			"syntaxes": ["Packages/LESS/Syntaxes/LESS.sublime-syntax"],
+			// ST4
+			"document_selector": "source.less"
+		},
+		{
+			"languageId": "vue",
+			// ST3
+			"scopes": ["text.html.vue"],
+			"syntaxes": [
+				"Packages/Vue Syntax Highlight/Vue Component.sublime-syntax"
+			],
+			// ST4
+			"document_selector": "text.html.vue"
+		}
+	],
+	// @see https://github.com/tailwindlabs/tailwindcss-intellisense/blob/45c5cd6d4a0bcaafbeabb661e505c86de5e7d120/src/lsp/server.ts#L82-L86
+	"initializationOptions": {
+		// seems related to https://github.com/tailwindlabs/tailwindcss-intellisense#tailwindcssincludelanguages
+		// it looks like a syntax (re-)mapping whose keys/values are old/new languageIds
+		"userLanguages": {}
+	},
+	// @see https://github.com/tailwindlabs/tailwindcss-intellisense#settings
+	// @see https://github.com/tailwindlabs/tailwindcss-intellisense/blob/master/package.json#L58-L164
+	"settings": {
+		"tailwindCSS.colorDecorators": "on",
+		"tailwindCSS.emmetCompletions": false,
+		"tailwindCSS.experimental.classRegex": [],
+		"tailwindCSS.experimental.showPixelValues": false,
+		"tailwindCSS.includeLanguages": {},
+		"tailwindCSS.validate": true,
+		// linting
+		"tailwindCSS.lint.cssConflict": "warning",
+		"tailwindCSS.lint.invalidApply": "error",
+		"tailwindCSS.lint.invalidConfigPath": "error",
+		"tailwindCSS.lint.invalidScreen": "error",
+		"tailwindCSS.lint.invalidTailwindDirective": "error",
+		"tailwindCSS.lint.invalidVariant": "error"
+	}
+}
