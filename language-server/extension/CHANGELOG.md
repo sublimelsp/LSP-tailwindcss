@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.6.1
+
+- Fix error caused by incorrect feature flags import
+
+## 0.6.0
+
+- Add support for [JIT mode](https://tailwindcss.com/docs/just-in-time-mode)
+- General stability and reliability improvements
+- Change `tailwindCSS.colorDecorators` setting to a boolean. Note that `editor.colorDecorators` must be enabled for decorators to render.
+
+## 0.5.10
+
+- Update output channel name (#262)
+- Fix initialisation failure when using "jit" mode with tailwindcss v2.1 (#296)
+
 ## 0.5.9
 
 - Add `focus-visible`, `checked`, `motion-safe`, `motion-reduce`, and `dark`  to `@variants` completions
