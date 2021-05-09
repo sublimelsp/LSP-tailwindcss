@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/tailwindcss-intellisense/.github/banner-dark.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/banner-dark.png" alt="" />
 
 Tailwind CSS IntelliSense enhances the Tailwind development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, and linting.
 
@@ -6,7 +6,7 @@ Tailwind CSS IntelliSense enhances the Tailwind development experience by provid
 
 **[Install via the Visual Studio Code Marketplace →](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)**
 
-In order for the extension to activate you must have [`tailwindcss` installed](https://tailwindcss.com/docs/installation/#1-install-tailwind-via-npm) and a [Tailwind config file](https://tailwindcss.com/docs/installation/#3-create-your-tailwind-config-file-optional) named `tailwind.config.js` or `tailwind.js` in your workspace.
+In order for the extension to activate you must have [`tailwindcss` installed](https://tailwindcss.com/docs/installation) and a [Tailwind config file](https://tailwindcss.com/docs/installation#create-your-configuration-file) named `tailwind.config.js` in your workspace.
 
 ## Features
 
@@ -14,19 +14,19 @@ In order for the extension to activate you must have [`tailwindcss` installed](h
 
 Intelligent suggestions for class names, as well as [CSS functions and directives](https://tailwindcss.com/docs/functions-and-directives/).
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/tailwindcss-intellisense/.github/autocomplete.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/autocomplete.png" alt="" />
 
 ### Linting
 
 Highlights errors and potential bugs in both your CSS and your markup.
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/tailwindcss-intellisense/.github/linting.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/linting.png" alt="" />
 
 ### Hover Preview
 
 See the complete CSS for a Tailwind class name by hovering over it.
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/tailwindcss-intellisense/.github/hover.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/hover.png" alt="" />
 
 ### CSS Syntax Highlighting
 
@@ -40,7 +40,7 @@ VS Code has built-in CSS validation which may display errors when using Tailwind
 "css.validate": false
 ```
 
-By default VS Code will not trigger completions when editing "string" content, for example within JSX attribute values. Updating the `editor.quickSuggestions` setting may improve your experience, particularly when editing Tailwind classes within JSX:
+By default VS Code will not trigger completions when editing "string" content, for example within JSX attribute values. Updating the `editor.quickSuggestions` setting may improve your experience:
 
 ```
 "editor.quickSuggestions": {
@@ -66,19 +66,11 @@ This setting allows you to add additional language support. The key of each entr
 
 Enable completions when using [Emmet](https://emmet.io/)-style syntax, for example `div.bg-red-500.uppercase`. **Default: `false`**
 
-```json
-{
-  "tailwindCSS.emmetCompletions": true
-}
-```
-
 ### `tailwindCSS.colorDecorators`
 
-Controls whether the editor should render inline color decorators for Tailwind CSS classes and helper functions.
+Controls whether the editor should render inline color decorators for Tailwind CSS classes and helper functions. **Default: `true`**
 
-- `inherit`: Color decorators are rendered if `editor.colorDecorators` is enabled.
-- `on`: Color decorators are rendered.
-- `off`: Color decorators are not rendered.
+> Note that `editor.colorDecorators` must be enabled for color decorators to be shown.
 
 ### `tailwindCSS.showPixelEquivalents`
 
@@ -120,11 +112,14 @@ Unknown or invalid path used with the [`theme` helper](https://tailwindcss.com/d
 
 Class names on the same HTML element which apply the same CSS property or properties. **Default: `warning`**
 
+#### `tailwindCSS.lint.recommendedVariantOrder`
+
+Class variants not in the recommended order (applies in [JIT mode](https://tailwindcss.com/docs/just-in-time-mode) only). **Default: `warning`**
+
 ## Troubleshooting
 
 If you’re having issues getting the IntelliSense features to activate, there are a few things you can check:
 
-- Ensure that you have a Tailwind config file in your workspace and that this is named `tailwind.config.js` or `tailwind.js`. Check out the Tailwind documentation for details on [creating a config file](https://tailwindcss.com/docs/installation/#3-create-your-tailwind-config-file-optional).
-- Ensure that the `tailwindcss` module is installed in your workspace, via `npm`, `yarn`, or `pnpm`. Tailwind CSS IntelliSense does not currently support Yarn Plug'n'Play.
-- If you installed `tailwindcss` or created your config file while your project was already open in Visual Studio Code you may need to reload the editor. You can either restart VS Code entirely, or use the `Developer: Reload Window` command which can be found in the command palette.
+- Ensure that you have a Tailwind config file in your workspace and that this is named `tailwind.config.js`. Check out the Tailwind documentation for details on [creating a config file](https://tailwindcss.com/docs/installation#create-your-configuration-file).
+- Ensure that the `tailwindcss` module is installed in your workspace, via `npm`, `yarn`, or `pnpm`.
 - Make sure your VS Code settings aren’t causing your Tailwind config file to be excluded from search, for example via the `search.exclude` setting.
