@@ -70,7 +70,6 @@
 		"tailwindCSS.colorDecorators": true,
 		"tailwindCSS.emmetCompletions": false,
 		"tailwindCSS.experimental.classRegex": [],
-		"tailwindCSS.includeLanguages": {},
 		"tailwindCSS.rootFontSize": 16,
 		"tailwindCSS.showPixelEquivalents": true,
 		"tailwindCSS.validate": true,
