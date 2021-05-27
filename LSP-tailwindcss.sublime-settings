@@ -61,11 +61,6 @@
 			"document_selector": "text.html.vue"
 		}
 	],
-	// @see https://github.com/tailwindlabs/tailwindcss-intellisense/blob/45c5cd6d4a0bcaafbeabb661e505c86de5e7d120/src/lsp/server.ts#L82-L86
-	"initializationOptions": {
-		// @see https://github.com/tailwindlabs/tailwindcss-intellisense#tailwindcssincludelanguages
-		"userLanguages": {}
-	},
 	"settings": {
 		"tailwindCSS.colorDecorators": true,
 		"tailwindCSS.emmetCompletions": false,
