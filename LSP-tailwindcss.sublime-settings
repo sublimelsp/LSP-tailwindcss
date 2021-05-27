@@ -2,63 +2,42 @@
 	"languages": [
 		{
 			"languageId": "html",
-			// ST3
 			"scopes": ["text.html.basic"],
 			"syntaxes": [
 				"Packages/HTML/HTML.sublime-syntax",
 				"Packages/PHP/PHP.sublime-syntax"
-			],
-			// ST4
-			"document_selector": "text.html.basic | embedding.php | text.blade",
-			"feature_selector": "text.html"
+			]
 		},
 		{
 			"languageId": "javascript",
-			// ST3
 			"scopes": ["source.js"],
 			"syntaxes": [
 				"Packages/JavaScript/JavaScript.sublime-syntax",
 				"Packages/Babel/JavaScript (Babel).sublime-syntax"
-			],
-			// ST4
-			"document_selector": "source.js"
+			]
 		},
 		{
 			"languageId": "css",
-			// ST3
 			"scopes": ["source.css"],
 			"syntaxes": [
 				"Packages/CSS/CSS.sublime-syntax",
 				"Packages/CSS3/CSS3.sublime-syntax"
-			],
-			// ST4
-			"document_selector": "source.css"
+			]
 		},
 		{
 			"languageId": "scss",
-			// ST3
 			"scopes": ["source.scss"],
-			"syntaxes": ["Packages/Sass/Syntaxes/SCSS.sublime-syntax"],
-			// ST4
-			"document_selector": "source.scss"
+			"syntaxes": ["Packages/Sass/Syntaxes/SCSS.sublime-syntax"]
 		},
 		{
 			"languageId": "less",
-			// ST3
 			"scopes": ["source.less"],
-			"syntaxes": ["Packages/LESS/Syntaxes/LESS.sublime-syntax"],
-			// ST4
-			"document_selector": "source.less"
+			"syntaxes": ["Packages/LESS/Syntaxes/LESS.sublime-syntax"]
 		},
 		{
 			"languageId": "vue",
-			// ST3
 			"scopes": ["text.html.vue"],
-			"syntaxes": [
-				"Packages/Vue Syntax Highlight/Vue Component.sublime-syntax"
-			],
-			// ST4
-			"document_selector": "text.html.vue"
+			"syntaxes": ["Packages/Vue Syntax Highlight/Vue Component.sublime-syntax"]
 		}
 	],
 	"settings": {
