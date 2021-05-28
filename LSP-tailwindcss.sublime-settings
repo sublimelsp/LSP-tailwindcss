@@ -2,10 +2,12 @@
 	"languages": [
 		{
 			"languageId": "html",
-			"scopes": ["text.html.basic"],
+			"scopes": ["text.html.basic", "embedding.php", "text.blade"],
 			"syntaxes": [
 				"Packages/HTML/HTML.sublime-syntax",
-				"Packages/PHP/PHP.sublime-syntax"
+				"Packages/PHP/PHP.sublime-syntax",
+				"Packages/PHP/PHP.sublime-syntax",
+				"Packages/Laravel Blade Highlighter/blade.sublime-syntax"
 			]
 		},
 		{
