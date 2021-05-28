@@ -11,6 +11,13 @@
 			]
 		},
 		{
+			"languageId": "javascriptreact",
+			"scopes": ["source.jsx", "source.js.react"],
+			"syntaxes": [
+				"Packages/User/JS Custom/Syntaxes/React.sublime-syntax",
+			],
+		},
+		{
 			"languageId": "javascript",
 			"scopes": ["source.js"],
 			"syntaxes": [
@@ -25,6 +32,20 @@
 				"Packages/CSS/CSS.sublime-syntax",
 				"Packages/CSS3/CSS3.sublime-syntax"
 			]
+		},
+		{
+			"languageId": "typescriptreact",
+			"scopes": ["source.tsx"],
+			"syntaxes": [
+				"Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+			],
+		},
+		{
+			"languageId": "typescript",
+			"scopes": ["source.ts"],
+			"syntaxes": [
+				"Packages/TypeScript Syntax/TypeScript.tmLanguage",
+			],
 		},
 		{
 			"languageId": "scss",
