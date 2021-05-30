@@ -35,9 +35,6 @@ class LspTailwindcssPlugin(NpmClientHandler):
         tailwind_config_file_path = os.path.join(path, 'tailwind.config.js')
         if not os.path.exists(tailwind_config_file_path):
             return "No tailwind.config.js present in {}".format(path)
-        is_tailwind_dependecy_installed = os.path.join(path, 'node_modules', 'tailwindcss')
-        if not os.path.exists(is_tailwind_dependecy_installed):
-            return "No tailwindcss package found in node_modules for path {}. Make sure to install the tailwindcss npm package.".format(path)
         return None
 
     @classmethod
