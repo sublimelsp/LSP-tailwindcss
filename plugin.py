@@ -24,10 +24,10 @@ class LspTailwindcssPlugin(NpmClientHandler):
     @classmethod
     def is_allowed_to_start(
         cls,
-        _window: sublime.Window,
-        _initiating_view: Optional[sublime.View] = None,
+        window: sublime.Window,
+        initiating_view: Optional[sublime.View] = None,
         workspace_folders: Optional[List[WorkspaceFolder]] = None,
-        _configuration: Optional[ClientConfig] = None
+        configuration: Optional[ClientConfig] = None
     ) -> Optional[str]:
         if not workspace_folders:
             return "Requires a folder to start."
