@@ -16,3 +16,11 @@ class LspTailwindcssPlugin(NpmClientHandler):
     server_binary_path = os.path.join(
         server_directory, 'extension', 'dist', 'server', 'index.js'
     )
+
+    @classmethod
+    def on_client_configuration_ready(cls, configuration: dict) -> None:
+        configuration["initializationOptions"].setdefault("userLanguages", {
+            # the server requires the existance of "userLanguages" in initializationOptions
+            # userLanguages is a VS Code specific setting
+        })
+

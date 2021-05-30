@@ -1,0 +1,152 @@
+{
+  "contributions": {
+    "settings": [
+      {
+        "file_patterns": [
+          "/LSP-tailwindcss.sublime-settings"
+        ],
+        "schema": {
+          "$id": "sublime://settings/LSP-tailwindcss",
+          "definitions": {
+            "PluginConfig": {
+              "properties": {
+                "settings": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "tailwindCSS.emmetCompletions": {
+                      "type": "boolean",
+                      "default": false,
+                      "markdownDescription": "Enable class name completions when using Emmet-style syntax, for example `div.bg-red-500.uppercase`"
+                    },
+                    "tailwindCSS.colorDecorators": {
+                      "type": "boolean",
+                      "default": true,
+                      "markdownDescription": "Controls whether the editor should render inline color decorators for Tailwind CSS classes and helper functions."
+                    },
+                    "tailwindCSS.validate": {
+                      "type": "boolean",
+                      "default": true,
+                      "markdownDescription": "Enable linting. Rules can be configured individually using the `tailwindcss.lint.*` settings"
+                    },
+                    "tailwindCSS.lint.cssConflict": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "warning",
+                      "markdownDescription": "Class names on the same HTML element which apply the same CSS property or properties"
+                    },
+                    "tailwindCSS.lint.invalidApply": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "error",
+                      "markdownDescription": "Unsupported use of the [`@apply` directive](https://tailwindcss.com/docs/functions-and-directives/#apply)"
+                    },
+                    "tailwindCSS.lint.invalidScreen": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "error",
+                      "markdownDescription": "Unknown screen name used with the [`@screen` directive](https://tailwindcss.com/docs/functions-and-directives/#screen)"
+                    },
+                    "tailwindCSS.lint.invalidVariant": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "error",
+                      "markdownDescription": "Unknown variant name used with the [`@variants` directive](https://tailwindcss.com/docs/functions-and-directives/#variants)"
+                    },
+                    "tailwindCSS.lint.invalidConfigPath": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "error",
+                      "markdownDescription": "Unknown or invalid path used with the [`theme` helper](https://tailwindcss.com/docs/functions-and-directives/#theme)"
+                    },
+                    "tailwindCSS.lint.invalidTailwindDirective": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "error",
+                      "markdownDescription": "Unknown value used with the [`@tailwind` directive](https://tailwindcss.com/docs/functions-and-directives/#tailwind)"
+                    },
+                    "tailwindCSS.lint.recommendedVariantOrder": {
+                      "type": "string",
+                      "enum": [
+                        "ignore",
+                        "warning",
+                        "error"
+                      ],
+                      "default": "warning",
+                      "markdownDescription": "Class variants not in the recommended order (applies in [JIT mode](https://tailwindcss.com/docs/just-in-time-mode) only)"
+                    },
+                    "tailwindCSS.experimental.classRegex": {
+                      "type": "array"
+                    },
+                    "tailwindCSS.showPixelEquivalents": {
+                      "type": "boolean",
+                      "default": true,
+                      "markdownDescription": "Show `px` equivalents for `rem` CSS values."
+                    },
+                    "tailwindCSS.rootFontSize": {
+                      "type": "number",
+                      "default": 16,
+                      "markdownDescription": "Root font size in pixels. Used to convert `rem` CSS values to their `px` equivalents. See `#tailwindCSS.showPixelEquivalents#`."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "sublime://settings/LSP-plugin-base"
+            },
+            {
+              "$ref": "sublime://settings/LSP-tailwindcss#/definitions/PluginConfig"
+            }
+          ]
+        }
+      },
+      {
+        "file_patterns": [
+          "/*.sublime-project"
+        ],
+        "schema": {
+          "properties": {
+            "settings": {
+              "properties": {
+                "LSP": {
+                  "properties": {
+                    "LSP-tailwindcss": {
+                      "$ref": "sublime://settings/LSP-tailwindcss#/definitions/PluginConfig"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
