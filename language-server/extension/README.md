@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/banner-dark.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/vscode-tailwindcss/.github/banner-dark.png" alt="" />
 
 Tailwind CSS IntelliSense enhances the Tailwind development experience by providing Visual Studio Code users with advanced features such as autocomplete, syntax highlighting, and linting.
 
@@ -14,19 +14,19 @@ In order for the extension to activate you must have [`tailwindcss` installed](h
 
 Intelligent suggestions for class names, as well as [CSS functions and directives](https://tailwindcss.com/docs/functions-and-directives/).
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/autocomplete.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/vscode-tailwindcss/.github/autocomplete.png" alt="" />
 
 ### Linting
 
 Highlights errors and potential bugs in both your CSS and your markup.
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/linting.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/vscode-tailwindcss/.github/linting.png" alt="" />
 
 ### Hover Preview
 
 See the complete CSS for a Tailwind class name by hovering over it.
 
-<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/.github/hover.png" alt="" />
+<img src="https://raw.githubusercontent.com/bradlc/vscode-tailwindcss/master/packages/vscode-tailwindcss/.github/hover.png" alt="" />
 
 ### CSS Syntax Highlighting
 
@@ -116,6 +116,10 @@ Class names on the same HTML element which apply the same CSS property or proper
 
 Class variants not in the recommended order (applies in [JIT mode](https://tailwindcss.com/docs/just-in-time-mode) only). **Default: `warning`**
 
+### `tailwindCSS.inspectPort`
+
+Enable the Node.js inspector agent for the language server and listen on the specified port. **Default: `null`**
+
 ## Troubleshooting
 
 If you’re having issues getting the IntelliSense features to activate, there are a few things you can check:
@@ -123,3 +127,4 @@ If you’re having issues getting the IntelliSense features to activate, there a
 - Ensure that you have a Tailwind config file in your workspace and that this is named `tailwind.config.js`. Check out the Tailwind documentation for details on [creating a config file](https://tailwindcss.com/docs/installation#create-your-configuration-file).
 - Ensure that the `tailwindcss` module is installed in your workspace, via `npm`, `yarn`, or `pnpm`.
 - Make sure your VS Code settings aren’t causing your Tailwind config file to be excluded from search, for example via the `search.exclude` setting.
+- Take a look at the language server output by running the `Tailwind CSS: Show Output` command from the command palette. This may show errors that are preventing the extension from activating.

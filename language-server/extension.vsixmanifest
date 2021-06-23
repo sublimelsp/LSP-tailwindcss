@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Language="en-US" Id="vscode-tailwindcss" Version="0.6.1" Publisher="bradlc"/>
+    <Identity Language="en-US" Id="vscode-tailwindcss" Version="0.6.12" Publisher="bradlc"/>
     <DisplayName>Tailwind CSS IntelliSense</DisplayName>
     <Description xml:space="preserve">Intelligent Tailwind CSS tooling for VS Code</Description>
     <Tags>tailwind,tailwindcss,css,intellisense,autocomplete,vscode</Tags>
@@ -9,7 +9,7 @@
     <GalleryFlags>Public Preview</GalleryFlags>
     <Badges></Badges>
     <Properties>
-      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.33.0" />
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.52.0" />
       <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
       <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
       <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace" />

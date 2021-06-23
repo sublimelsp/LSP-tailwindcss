@@ -1,5 +1,59 @@
 # Changelog
 
+## 0.6.12
+
+- Fix hover error (#353)
+
+## 0.6.11
+
+- Update `@tailwind` completions and diagnostics to account for `@tailwind variants`
+
+## 0.6.10
+
+- Ignore `content: ""` when determining document colors. This enables color decorators for `before` and `after` variants
+
+## 0.6.9
+
+- Use VS Code's built-in file watcher
+
+## 0.6.8
+
+- Add [Astro](https://astro.build/) languages (`astro` and `astro-markdown`)
+- Fix incorrect separator (#343)
+- [JIT] Update opacity modifier completions to show the full class
+
+## 0.6.7
+
+- Add support for `tailwindcss` v2.2
+- Fix excess semi-colons in CSS previews
+- Add `tailwindCSS.inspectPort` setting
+
+## 0.6.6
+
+- [JIT] Show `rem` pixel equivalents in completion item details (#332)
+- [JIT] Fix initialisation when `mode` is set in a preset (#333)
+- Fix completions and hovers inside `<style>` in JavaScript files (#334)
+- Fix module resolution when path has a `#` character (#331)
+
+## 0.6.5
+
+- [JIT] Add [opacity modifier](https://github.com/tailwindlabs/tailwindcss/pull/4348) completions
+- Update language server filename
+
+## 0.6.4
+
+- Update minimum VS Code version requirement to `^1.52.0`
+- Potential fix for language feature duplication (#316, [#326](https://github.com/tailwindlabs/tailwindcss-intellisense/issues/326), [#327](https://github.com/tailwindlabs/tailwindcss-intellisense/issues/327))
+- [JIT] Fix `@variants` completions and diagnostics (#324)
+
+## 0.6.3
+
+- [JIT] Fix error when using `@apply` in a plugin (#319)
+
+## 0.6.2
+
+- Fix error when using a `withOptions` plugin without any options
+
 ## 0.6.1
 
 - Fix error caused by incorrect feature flags import
