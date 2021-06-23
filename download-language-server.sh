@@ -21,6 +21,12 @@ mkdir ./language-server
 # unzip
 unzip -a $tarball -d ./language-server
 
+# ./language-server/package.json is requrired for lsp_utils to work. Reuse pacakge.json from extenison folder.
+cp ./language-server/extension/package.json ./language-server
+
+# ./language-server/package-lock.json is required. Without it an error will apear when when starting the plugin.
+cd language-server && npm i && cd ..
+
 # clean up
 rm $tarball
 echo "Done"
