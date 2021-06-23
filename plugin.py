@@ -37,10 +37,3 @@ class LspTailwindcssPlugin(NpmClientHandler):
             return "No tailwind.config.js present in {}".format(path)
         return None
 
-    @classmethod
-    def on_client_configuration_ready(cls, configuration: dict) -> None:
-        configuration["initializationOptions"].setdefault("userLanguages", {
-            # the server requires the existance of "userLanguages" in initializationOptions
-            # userLanguages is a VS Code specific setting
-        })
-
