@@ -17,9 +17,7 @@ def plugin_unloaded():
 class LspTailwindcssPlugin(NpmClientHandler):
     package_name = __package__
     server_directory = 'language-server'
-    server_binary_path = os.path.join(
-        server_directory, 'server', 'tailwindServer.js'
-    )
+    server_binary_path = os.path.join(server_directory, 'server', 'tailwindServer.js')
 
     @classmethod
     def is_allowed_to_start(
