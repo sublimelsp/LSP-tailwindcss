@@ -15,12 +15,21 @@ curl -s "https://api.github.com/repos/${GITHUB_REPO_NAME}/releases/latest" \
 tarball="$(find . -name "*.vsix")"
 
 # clean up
+rm -rf ./language-server-temp
 rm -rf ./language-server
 mkdir ./language-server
 
 # unzip
-unzip -a $tarball -d ./language-server
+unzip -a "$tarball" -d ./language-server-temp
+
+# ./language-server/package.json is required for lsp_utils to work. Reuse package.json from the extension folder.
+cp ./language-server-temp/extension/package.json ./language-server
+cp -R ./language-server-temp/extension/dist/server ./language-server
+
+# ./language-server/package-lock.json is required. Without it an error will appear when when starting the plugin.
+cd language-server && npm i --production && cd ..
 
 # clean up
-rm $tarball
+rm "$tarball"
+rm -rf ./language-server-temp
 echo "Done"
