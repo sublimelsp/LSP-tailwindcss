@@ -62,6 +62,11 @@
 			"languageId": "vue",
 			"scopes": ["text.html.vue"],
 			"syntaxes": ["Packages/Vue Syntax Highlight/Vue Component.sublime-syntax"]
+		},
+		{
+			"languageId": "svelte",
+			"scopes": ["text.html.svelte"],
+			"syntaxes": ["Packages/Svelte/Svelte.sublime-syntax"]
 		}
 	],
 	"settings": {
