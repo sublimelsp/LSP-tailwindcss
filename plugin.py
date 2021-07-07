@@ -30,8 +30,9 @@ class LspTailwindcssPlugin(NpmClientHandler):
         if not workspace_folders:
             return "Requires a folder to start."
         path = workspace_folders[0].path
-        tailwind_config_file_path = os.path.join(path, 'tailwind.config.js')
-        if not os.path.exists(tailwind_config_file_path):
-            return "No tailwind.config.js present in {}".format(path)
+        tailwind_config_file_path_js = os.path.join(path, 'tailwind.config.js')
+        tailwind_config_file_path_cjs = os.path.join(path, 'tailwind.config.cjs')
+        if not os.path.exists(tailwind_config_file_path_js) and not os.path.exists(tailwind_config_file_path_cjs):
+            return "No tailwind.config.js or tailwind.config.cjs present in {}".format(path)
         return None
 
