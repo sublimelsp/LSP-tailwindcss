@@ -1,3 +1,4 @@
+import fnmatch
 import os
 import re
 import sublime
@@ -47,7 +48,7 @@ def find_file_in_workspace(file_pattern: str, root_folder: str, folder_exclude_p
         if folder_exclude_patterns:
             for folder_excldue_pattern in folder_exclude_patterns:
                 # skip ignored folders
-                directories[:] = [d for d in directories if not re.search(folder_excldue_pattern, d)]
+                directories[:] = [d for d in directories if not fnmatch.fnmatch(d, folder_excldue_pattern)]
 
         for file in files:
             if re.search(file_pattern, file):
