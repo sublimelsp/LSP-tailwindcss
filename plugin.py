@@ -45,9 +45,9 @@ class LspTailwindcssPlugin(NpmClientHandler):
 
 def find_file_in_workspace(file_pattern: str, root_folder: str, folder_exclude_patterns: Set[str] = None) -> Optional[str]:
     for path, directories, files in os.walk(root_folder):
-        for folder_excldue_pattern in folder_exclude_patterns or []:
+        for folder_exclude_pattern in folder_exclude_patterns or []:
             # skip ignored folders
-            directories[:] = [d for d in directories if not fnmatch.fnmatch(d, folder_excldue_pattern)]
+            directories[:] = [d for d in directories if not fnmatch.fnmatch(d, folder_exclude_pattern)]
 
         for file in files:
             if re.search(file_pattern, file):
