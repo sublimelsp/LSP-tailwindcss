@@ -34,7 +34,7 @@ class LspTailwindcssPlugin(NpmClientHandler):
 
         # Config pattern is found here:
         # https://github.com/tailwindlabs/tailwindcss-intellisense/blob/766a5d533dcb68640ce6b3270488f6701dd1173d/packages/vscode-tailwindcss/src/extension.ts#L40
-        config_file_pattern = '(tailwind|tailwind.config).(js|cjs)'
+        config_file_pattern = r'^(tailwind|tailwind\.config)\.(js|cjs)$'
         folder_exclude_patterns = sublime.load_settings('Preferences.sublime-settings').get("folder_exclude_patterns", []) # type: List[str]
         folder_exclude_patterns.append('node_modules') # definitely exclude node_modules
         config_file = find_file_in_workspace(config_file_pattern, workspace_folders[0].path, folder_exclude_patterns)
