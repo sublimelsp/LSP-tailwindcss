@@ -18,3 +18,20 @@ class LspTailwindcssPlugin(NpmClientHandler):
     package_name = __package__
     server_directory = 'language-server'
     server_binary_path = os.path.join(server_directory, 'server', 'tailwindServer.js')
+
+    @classmethod
+    def is_allowed_to_start(
+        cls,
+        window: sublime.Window,
+        initiating_view: Optional[sublime.View] = None,
+        workspace_folders: Optional[List[WorkspaceFolder]] = None,
+        configuration: Optional[ClientConfig] = None
+    ) -> Optional[str]:
+        if not workspace_folders:
+            return "Requires a folder to start."
+        path = workspace_folders[0].path
+        tailwind_config_file_path = os.path.join(path, 'tailwind.config.js')
+        if not os.path.exists(tailwind_config_file_path):
+            return "No tailwind.config.js present in {}".format(path)
+        return None
+
