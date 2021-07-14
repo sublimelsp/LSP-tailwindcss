@@ -50,6 +50,6 @@ def find_file_in_workspace(file_pattern: str, root_folder: str, folder_exclude_p
             directories[:] = [d for d in directories if not fnmatch.fnmatch(d, folder_exclude_pattern)]
 
         for file in files:
-            if re.search(file_pattern, file):
+            if re.match(file_pattern, file):
                 return os.path.join(path, file)
     return None
