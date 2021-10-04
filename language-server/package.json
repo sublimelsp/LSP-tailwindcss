@@ -5,7 +5,7 @@
   "preview": true,
   "author": "Brad Cornes <hello@bradley.dev>",
   "license": "MIT",
-  "version": "0.6.12",
+  "version": "0.6.14",
   "homepage": "https://github.com/tailwindlabs/tailwindcss-intellisense",
   "bugs": {
     "url": "https://github.com/tailwindlabs/tailwindcss-intellisense/issues",
@@ -198,7 +198,8 @@
     "minify": "glob-exec --foreach --parallel \"dist/**/*.js\" -- \"terser {{file}} --compress --mangle --output {{file.toString()}}\"",
     "package": "vsce package",
     "publish": "vsce publish",
-    "vscode:prepublish": "npm run build",
+    "copy:notices": "cp ../tailwindcss-language-server/ThirdPartyNotices.txt ./dist/ThirdPartyNotices.txt",
+    "vscode:prepublish": "npm run build && npm run copy:notices",
     "clean": "rimraf dist",
     "test": "jest"
   },
