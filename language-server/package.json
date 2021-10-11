@@ -5,7 +5,7 @@
   "preview": true,
   "author": "Brad Cornes <hello@bradley.dev>",
   "license": "MIT",
-  "version": "0.6.15",
+  "version": "0.7.1",
   "homepage": "https://github.com/tailwindlabs/tailwindcss-intellisense",
   "bugs": {
     "url": "https://github.com/tailwindlabs/tailwindcss-intellisense/issues",
@@ -80,6 +80,18 @@
           },
           "default": {},
           "markdownDescription": "Enable features in languages that are not supported by default. Add a mapping here between the new language and an already supported language.\n E.g.: `{\"plaintext\": \"html\"}`"
+        },
+        "tailwindCSS.classAttributes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "class",
+            "className",
+            "ngClass"
+          ],
+          "markdownDescription": "The HTML attributes for which to provide class completions, hover previews, linting etc."
         },
         "tailwindCSS.colorDecorators": {
           "type": "boolean",
@@ -207,9 +219,9 @@
     "test": "jest"
   },
   "devDependencies": {
-    "@ctrl/tinycolor": "3.1.4",
     "@types/vscode": "1.52.0",
     "@vercel/ncc": "0.28.4",
+    "color-name": "1.1.4",
     "glob-exec": "0.1.1",
     "rimraf": "3.0.2",
     "terser": "4.6.12",

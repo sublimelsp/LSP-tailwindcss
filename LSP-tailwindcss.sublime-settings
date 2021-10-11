@@ -72,7 +72,12 @@
 	"settings": {
 		"tailwindCSS.colorDecorators": true,
 		"tailwindCSS.emmetCompletions": false,
-		"tailwindCSS.experimental.classRegex": [],
+		"tailwindCSS.includeLanguages": {},
+		"tailwindCSS.classAttributes": [
+			"class",
+			"className",
+			"ngClass"
+		],
 		"tailwindCSS.rootFontSize": 16,
 		"tailwindCSS.showPixelEquivalents": true,
 		"tailwindCSS.validate": true,
@@ -82,6 +87,7 @@
 		"tailwindCSS.lint.invalidScreen": "error",
 		"tailwindCSS.lint.invalidTailwindDirective": "error",
 		"tailwindCSS.lint.invalidVariant": "error",
-		"tailwindCSS.lint.recommendedVariantOrder": "warning"
+		"tailwindCSS.lint.recommendedVariantOrder": "warning",
+		"tailwindCSS.experimental.classRegex": [],
 	}
 }
