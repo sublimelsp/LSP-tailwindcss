@@ -25,7 +25,10 @@ unzip -a "$tarball" -d ./language-server-temp
 # ./language-server/package.json is required for lsp_utils to work. Reuse package.json from the extension folder.
 cp ./language-server-temp/extension/package.json ./language-server
 cp -R ./language-server-temp/extension/dist/server ./language-server
-cp ./resolve_module.js ./language-server # move script to language server dir
+
+# because the ./language-server is deleted each time we envoke this script
+# we need to copy the ./resolve_module.js to the ./language-server again
+cp ./resolve_module.js ./language-server
 
 # ./language-server/package-lock.json is required. Without it an error will appear when when starting the plugin.
 cd language-server && npm i --production && cd ..
