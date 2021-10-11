@@ -44,8 +44,8 @@ class LspTailwindcssPlugin(NpmClientHandler):
         if not config_file:
             return "No tailwind configuration file present in the workspace folder."
         if not LspTailwindcssPlugin.is_tailwind_installed(workspace_folders[0].path):
-            return "`tailwindcss` dependency is not installed. Run `npm install` in the workspace to enable LSP-tailwindcss."
-        return None  # config found, return None to start the session
+            return "'tailwindcss' dependency is not installed in the workspace."
+        return None  # return None to start the session
 
     @classmethod
     def is_tailwind_installed(cls, root_folder: str) -> bool:
