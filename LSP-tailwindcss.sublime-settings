@@ -1,4 +1,28 @@
 {
+	"settings": {
+		"tailwindCSS.colorDecorators": true,
+		"tailwindCSS.emmetCompletions": false,
+		"tailwindCSS.includeLanguages": {},
+		"tailwindCSS.classAttributes": [
+			"class",
+			"className",
+			"ngClass"
+		],
+		"tailwindCSS.rootFontSize": 16,
+		"tailwindCSS.showPixelEquivalents": true,
+		"tailwindCSS.validate": true,
+		"tailwindCSS.lint.cssConflict": "warning",
+		"tailwindCSS.lint.invalidApply": "error",
+		"tailwindCSS.lint.invalidConfigPath": "error",
+		"tailwindCSS.lint.invalidScreen": "error",
+		"tailwindCSS.lint.invalidTailwindDirective": "error",
+		"tailwindCSS.lint.invalidVariant": "error",
+		"tailwindCSS.lint.recommendedVariantOrder": "warning",
+		"tailwindCSS.experimental.classRegex": [],
+	},
+	// ST4
+	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php",
+	// ST3
 	"languages": [
 		{
 			"languageId": "html",
@@ -68,26 +92,5 @@
 			"scopes": ["text.html.svelte"],
 			"syntaxes": ["Packages/Svelte/Svelte.sublime-syntax"]
 		}
-	],
-	"settings": {
-		"tailwindCSS.colorDecorators": true,
-		"tailwindCSS.emmetCompletions": false,
-		"tailwindCSS.includeLanguages": {},
-		"tailwindCSS.classAttributes": [
-			"class",
-			"className",
-			"ngClass"
-		],
-		"tailwindCSS.rootFontSize": 16,
-		"tailwindCSS.showPixelEquivalents": true,
-		"tailwindCSS.validate": true,
-		"tailwindCSS.lint.cssConflict": "warning",
-		"tailwindCSS.lint.invalidApply": "error",
-		"tailwindCSS.lint.invalidConfigPath": "error",
-		"tailwindCSS.lint.invalidScreen": "error",
-		"tailwindCSS.lint.invalidTailwindDirective": "error",
-		"tailwindCSS.lint.invalidVariant": "error",
-		"tailwindCSS.lint.recommendedVariantOrder": "warning",
-		"tailwindCSS.experimental.classRegex": [],
-	}
+	]
 }

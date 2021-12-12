@@ -8,6 +8,7 @@ import re
 import sublime
 import subprocess
 
+
 def plugin_loaded():
     LspTailwindcssPlugin.setup()
 
@@ -20,7 +21,7 @@ class LspTailwindcssPlugin(NpmClientHandler):
     package_name = __package__
     server_directory = 'language-server'
     server_binary_path = os.path.join(server_directory, 'server', 'tailwindServer.js')
-    skip_npm_install=True
+    skip_npm_install = True
 
     @classmethod
     def is_allowed_to_start(
