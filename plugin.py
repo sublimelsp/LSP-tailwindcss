@@ -33,9 +33,6 @@ class LspTailwindcssPlugin(NpmClientHandler):
     ) -> Optional[str]:
         if not workspace_folders:
             return "Requires a folder to start."
-        file_path = ""
-        if initiating_view:
-            file_path = initiating_view.file_name() or ""
         # Config pattern is found here:
         # https://github.com/tailwindlabs/tailwindcss-intellisense/blob/766a5d533dcb68640ce6b3270488f6701dd1173d/packages/vscode-tailwindcss/src/extension.ts#L40
         config_file_pattern = r'^(tailwind|tailwind\.config)\.(js|cjs)$'
@@ -46,7 +43,7 @@ class LspTailwindcssPlugin(NpmClientHandler):
         config_file = find_file_in_workspace(config_file_pattern, workspace_folders[0].path, folder_exclude_patterns)
         if not config_file:
             return "No tailwind configuration file present in the workspace folder."
-        if not LspTailwindcssPlugin.is_tailwind_installed(file_path):
+        if not LspTailwindcssPlugin.is_tailwind_installed(config_file):
             return "'tailwindcss' dependency is not installed in the workspace."
         return None  # return None to start the session
 
