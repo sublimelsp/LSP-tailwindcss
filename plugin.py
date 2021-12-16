@@ -33,7 +33,6 @@ class LspTailwindcssPlugin(NpmClientHandler):
     ) -> Optional[str]:
         if not workspace_folders:
             return "Requires a folder to start."
-
         # Config pattern is found here:
         # https://github.com/tailwindlabs/tailwindcss-intellisense/blob/766a5d533dcb68640ce6b3270488f6701dd1173d/packages/vscode-tailwindcss/src/extension.ts#L40
         config_file_pattern = r'^(tailwind|tailwind\.config)\.(js|cjs)$'
@@ -44,15 +43,15 @@ class LspTailwindcssPlugin(NpmClientHandler):
         config_file = find_file_in_workspace(config_file_pattern, workspace_folders[0].path, folder_exclude_patterns)
         if not config_file:
             return "No tailwind configuration file present in the workspace folder."
-        if not LspTailwindcssPlugin.is_tailwind_installed(workspace_folders[0].path):
+        if not LspTailwindcssPlugin.is_tailwind_installed(config_file):
             return "'tailwindcss' dependency is not installed in the workspace."
         return None  # return None to start the session
 
     @classmethod
-    def is_tailwind_installed(cls, root_folder: str) -> bool:
+    def is_tailwind_installed(cls, file_path: str) -> bool:
         server_directory_path = cls._server_directory_path()
         resolve_module_script = os.path.join(server_directory_path, 'resolve_module.js')
-        command = [cls._node_bin(), resolve_module_script, root_folder, 'tailwindcss']
+        command = [cls._node_bin(), resolve_module_script, file_path, 'tailwindcss']
         tailwindcss_path = subprocess.check_output(command, universal_newlines=True)
         return bool(tailwindcss_path)
 
