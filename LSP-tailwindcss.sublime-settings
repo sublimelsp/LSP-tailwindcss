@@ -32,7 +32,8 @@
 				"Packages/PHP/PHP.sublime-syntax",
 				"Packages/PHP/PHP.sublime-syntax",
 				"Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-				"Packages/Twig/resources/syntax/Twig.sublime-syntax"
+				"Packages/Twig/resources/syntax/Twig.sublime-syntax",
+				"Packages/Twig/resources/syntax/HTML (Twig).sublime-syntax"
 			]
 		},
 		{
