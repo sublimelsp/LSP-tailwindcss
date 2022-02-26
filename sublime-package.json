@@ -26,6 +26,18 @@
                       "default": {},
                       "markdownDescription": "Enable features in languages that are not supported by default. Add a mapping here between the new language and an already supported language.\n E.g.: `{\"plaintext\": \"html\"}`"
                     },
+                    "tailwindCSS.files.exclude": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "default": [
+                        "**/.git/**",
+                        "**/node_modules/**",
+                        "**/.hg/**"
+                      ],
+                      "markdownDescription": "Configure glob patterns to exclude from all IntelliSense features. Inherits all glob patterns from the `#files.exclude#` setting."
+                    },
                     "tailwindCSS.classAttributes": {
                       "type": "array",
                       "items": {
@@ -130,6 +142,14 @@
                       "type": "number",
                       "default": 16,
                       "markdownDescription": "Root font size in pixels. Used to convert `rem` CSS values to their `px` equivalents. See `#tailwindCSS.showPixelEquivalents#`."
+                    },
+                    "tailwindCSS.inspectPort": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "default": null,
+                      "markdownDescription": "Enable the Node.js inspector agent for the language server and listen on the specified port."
                     }
                   }
                 }
