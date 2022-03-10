@@ -24,7 +24,6 @@
 		"tailwindCSS.lint.invalidVariant": "error",
 		"tailwindCSS.lint.recommendedVariantOrder": "warning",
 		"tailwindCSS.experimental.classRegex": [],
-		"tailwindCSS.inspectPort": null
 	},
 	// ST4
 	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php",
