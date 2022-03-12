@@ -3,6 +3,11 @@
 		"tailwindCSS.colorDecorators": true,
 		"tailwindCSS.emmetCompletions": false,
 		"tailwindCSS.includeLanguages": {},
+		"tailwindCSS.files.exclude": [
+			"**/.git/**",
+			"**/node_modules/**",
+			"**/.hg/**"
+		],
 		"tailwindCSS.classAttributes": [
 			"class",
 			"className",
