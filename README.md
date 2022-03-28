@@ -7,7 +7,7 @@ Provided through [Tailwind CSS IntelliSense](https://github.com/tailwindlabs/tai
 ### Installation
 
 * Install [LSP](https://packagecontrol.io/packages/LSP) and `LSP-tailwindcss` via Package Control.
-* In order for the extension to activate you must have a [Tailwind config file](https://tailwindcss.com/docs/installation#create-your-configuration-file) named `tailwind.config.js` in your workspace.
+* In order for LSP-tailwindcss to work, you must have a [Tailwind config file](https://tailwindcss.com/docs/installation#create-your-configuration-file) named `tailwind.config.js` in your workspace.
 * Restart Sublime.
 
 ### Configuration
