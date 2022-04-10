@@ -13,5 +13,4 @@ def plugin_unloaded():
 class LspTailwindcssPlugin(NpmClientHandler):
     package_name = __package__
     server_directory = 'language-server'
-    server_binary_path = os.path.join(server_directory, 'server', 'tailwindServer.js')
-    skip_npm_install = True
+    server_binary_path = os.path.join(server_directory, 'node_modules', '.bin', 'tailwindcss-language-server')
