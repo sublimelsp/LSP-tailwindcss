@@ -26,7 +26,7 @@
 		"tailwindCSS.experimental.classRegex": [],
 	},
 	// ST4
-	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php | text.html.rails | text.haml",
+	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php | text.html.rails | text.html.erb | text.haml",
 	// ST3
 	"languages": [
 		{
