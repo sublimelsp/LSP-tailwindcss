@@ -26,12 +26,12 @@
 		"tailwindCSS.experimental.classRegex": [],
 	},
 	// ST4
-	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php | text.html.rails | text.html.erb | text.haml | text.jinja",
+	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | embedding.php | text.html.rails | text.html.erb | text.haml | text.jinja | text.html.elixir",
 	// ST3
 	"languages": [
 		{
 			"languageId": "html",
-			"scopes": ["text.html.basic", "embedding.php", "text.blade", "text.html.twig", "text.jinja"],
+			"scopes": ["text.html.basic", "embedding.php", "text.blade", "text.html.twig", "text.jinja", "text.html.elixir"],
 			"syntaxes": [
 				"Packages/HTML/HTML.sublime-syntax",
 				"Packages/PHP/PHP.sublime-syntax",
@@ -39,7 +39,8 @@
 				"Packages/Laravel Blade Highlighter/blade.sublime-syntax",
 				"Packages/Twig/resources/syntax/Twig.sublime-syntax",
 				"Packages/Twig/resources/syntax/HTML (Twig).sublime-syntax",
-				"Packages/Jinja2/resources/syntax/Jinja.sublime-syntax"
+				"Packages/Jinja2/resources/syntax/Jinja.sublime-syntax",
+				"Packages/Elixir/Syntaxes/HTML (EEx).tmLanguage"
 			]
 		},
 		{
