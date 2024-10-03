@@ -25,5 +25,5 @@
 		"tailwindCSS.lint.recommendedVariantOrder": "warning",
 		"tailwindCSS.experimental.classRegex": [],
 	},
-	"selector": "source.jsx | source.js.react | source.js | source.tsx | source.ts | source.css | source.scss | source.less | text.html.vue | text.html.svelte | text.html.basic | text.html.twig | text.blade | text.html.blade | embedding.php | text.html.rails | text.html.erb | text.haml | text.jinja | text.django | text.html.elixir | text.html.ngx | source.astro"
+	"selector": "embedding.php | source.astro | source.css | source.js | source.js.react | source.jsx | source.less | source.postcss | source.scss | source.ts | source.tsx | text.blade | text.django | text.haml | text.html.basic | text.html.blade | text.html.elixir | text.html.erb | text.html.jinja | text.html.ngx | text.html.rails | text.html.svelte | text.html.twig | text.html.vue | text.jinja | text.pug | text.slim"
 }
