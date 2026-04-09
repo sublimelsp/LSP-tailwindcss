@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from lsp_utils import NpmClientHandler
 import os
 
@@ -11,7 +13,7 @@ def plugin_unloaded():
 
 
 class LspTailwindcssPlugin(NpmClientHandler):
-    package_name = __package__
+    package_name = str(__package__)
     server_directory = 'language-server'
     server_binary_path = os.path.join(server_directory, 'node_modules', '@tailwindcss', 'language-server', 'bin', 'tailwindcss-language-server')
 
