@@ -1,0 +1,30 @@
+name: Smoke test
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: Smoke test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      # The server uses the Tailwind CSS installed in the workspace.
+      - name: Install Tailwind CSS
+        working-directory: tests/smoke
+        run: npm install --no-audit --no-fund
+
+      - uses: sublimelsp/lsp_smoke_test@v1
