@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+/* 'flex' applies the same CSS properties as 'block'. */
+.foo {
+  @apply flex block;
+}

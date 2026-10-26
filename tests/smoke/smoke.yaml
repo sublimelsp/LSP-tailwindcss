@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/sublimelsp/lsp_smoke_test/v1/smoke.schema.json
-file: sample.html
+file: app.css
 # 'flex' applies the same CSS properties as 'block'.
 expected_diagnostics:
   code: cssConflict
